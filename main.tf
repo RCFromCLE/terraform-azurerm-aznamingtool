@@ -189,7 +189,7 @@ resource "azurerm_container_group" "aznamingtool-container-app" {
     }
   }
   depends_on = [
-    azurerm_container_registry_task.aznamingtool_task
+    azurerm_container_registry_task.aznamingtool_task, azurerm_container_registry_task_schedule_run_now.run_aznamingtool_build
   ]
   lifecycle {
     ignore_changes = [
