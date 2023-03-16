@@ -1,11 +1,12 @@
 terraform-azurerm-aznamingtool
 ==============================
 
-This module deploys the Azure Naming Tool, a .NET Core-based utility that generates Azure resource names before provisioning. It allows deployment as either an Azure App Service or a Container Instance, based on the value of the `deployment_option` variable.
+This module deploys the Azure Naming Tool, a .NET Core-based utility that generates Azure resource names based on the operator's configuration. It allows deployment as either an Azure App Service or a Container Instance, based on the value of the `deployment_option` variable.
 
 The tool's image is sourced from the ACR created by this module, regardless of the chosen deployment option. For App Service deployment, users can opt for an App Service Environment based on the value of the `use_ase` variable.
 
  - Official Azure Cloud Adoption / Az Naming Tool Github Repo: https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingTool
+ - My blog post about this module - https://rudycorradetti.azurewebsites.net/2023/03/16/terraform-azurerm-aznamingtool-a-terraform-module-to-deploy-microsofts-azure-naming-tool/
 
 Usage
 -----
@@ -15,7 +16,7 @@ Usage
 ```hcl:
 
 module "aznamingtool" {
-  source = "github.com/your-org/terraform-azurerm-aznamingtool"
+  source = "https://registry.terraform.io/modules/RCFromCLE/aznamingtool/azurerm/latest"
   location         = "EastUS"
   deployment_option = "container_instance"
   business_description = "AzNamingTool"
