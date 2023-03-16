@@ -5,7 +5,7 @@ This module deploys the Azure Naming Tool, a .NET Core-based utility that genera
 
 The tool's image is sourced from the ACR created by this module, regardless of the chosen deployment option. For App Service deployment, users can opt for an App Service Environment based on the value of the `use_ase` variable.
 
- - Official Github Repo: https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingToolUsage
+ - Official Azure Cloud Adoption / Az Naming Tool Github Repo: https://github.com/microsoft/CloudAdoptionFramework/tree/master/ready/AzNamingToolUsage
 
 Usage
 -----
